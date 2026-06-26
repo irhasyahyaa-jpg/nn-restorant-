@@ -654,7 +654,7 @@ $menu_snack = [
         <!-- Menu Tabs -->
         <div class="menu-tabs" data-aos="fade-up" data-aos-delay="100" style="flex-wrap:wrap;">
             <button class="tab-btn active" data-target="tab-minuman"><i class="ri-cup-line"></i> Minuman</button>
-            <button class="tab-btn" data-target="tab-nusantara"><i class="ri-bowl-line"></i> Nusantara & Seafood</button>
+            <button class="tab-btn" data-target="tab-nusantara"><i class="ri-restaurant-line"></i> Nusantara & Seafood</button>
             <button class="tab-btn" data-target="tab-asian"><i class="ri-knife-line"></i> Asian & Western</button>
             <button class="tab-btn" data-target="tab-snack"><i class="ri-cake-2-line"></i> Snack & Packages</button>
         </div>
@@ -911,7 +911,7 @@ $menu_snack = [
             <i class="ri-cup-line"></i>
         </button>
         <button class="sticky-tab-btn" data-target="tab-nusantara" title="Nusantara & Seafood">
-            <i class="ri-bowl-line"></i>
+            <i class="ri-restaurant-line"></i>
         </button>
         <button class="sticky-tab-btn" data-target="tab-asian" title="Asian & Western">
             <i class="ri-knife-line"></i>
