@@ -20,12 +20,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--dark-bg);
     color: var(--text-light);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* Elegant Typography */
@@ -534,6 +539,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+    section {
+        padding: 4rem 15px !important;
+    }
+    .about-image img {
+        box-shadow: 10px 10px 0 var(--gold) !important;
+    }
+    .about-image {
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    
     /* Mobile Gallery NN Pattern - Reset to a beautiful responsive list of food images */
     .gallery-nn {
         grid-template-columns: repeat(2, 1fr) !important;

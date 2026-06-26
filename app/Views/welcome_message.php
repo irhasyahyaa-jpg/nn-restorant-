@@ -800,7 +800,7 @@ $menu_snack = [
             <span class="subtitle">✦ Kata Mereka ✦</span>
             <h2>Ulasan <span class="text-gradient">Pelanggan Setia</span></h2>
         </div>
-        <div class="testimonial-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="testimonial-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
             <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
                 <p class="testimonial-text">"Pengalaman bersantap paling mewah yang pernah saya rasakan. Soup Iga-nya luar biasa, kuahnya kaya rempah dan dagingnya empuk banget!"</p>
