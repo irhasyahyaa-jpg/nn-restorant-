@@ -526,22 +526,28 @@ footer {
 .gallery-nn .item:nth-child(19) { grid-area: 3 / 9 / 4 / 10; }
 .gallery-nn .item:nth-child(20) { grid-area: 4 / 9 / 5 / 10; }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-links { display: none; }
     .hero h1 { font-size: 3rem; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .contact-grid { padding: 2rem; }
-    
-    /* Mobile Gallery NN Pattern (User Requested) */
+}
+
+@media (max-width: 768px) {
+    /* Mobile Gallery NN Pattern - Reset to a beautiful responsive list of food images */
     .gallery-nn {
-        gap: 3px; /* Tiny gap for mosaic effect on small screens */
-        aspect-ratio: 9 / 4;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: auto !important;
+        aspect-ratio: auto !important;
+        gap: 12px !important;
     }
     .gallery-nn .item {
-        box-shadow: none; /* Prevents tiny tiles from looking cluttered */
-        border: none;
+        grid-area: auto !important;
+        height: 160px !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+        border: 1px solid rgba(212, 175, 55, 0.15) !important;
     }
     .gallery-nn .item:hover {
-        transform: scale(1.1); /* Smaller pop on mobile */
+        transform: scale(1.05); /* Smaller pop on mobile */
     }
 }

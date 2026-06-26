@@ -182,18 +182,38 @@ $menu_snack = [
         @media (max-width: 1200px) {
             .full-menu-grid { grid-template-columns: repeat(4, 1fr); }
         }
-        @media (max-width: 900px) {
+        @media (max-width: 992px) {
             .full-menu-grid { grid-template-columns: repeat(3, 1fr); }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .full-menu-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.5rem;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
             }
-            .menu-item h4 { font-size: 0.8rem; margin-bottom: 0.2rem; }
-            .menu-item .menu-price { font-size: 0.8rem; }
+            .menu-item h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+            .menu-item .menu-price { font-size: 0.95rem; }
+            .menu-item .menu-content { padding: 0.8rem; }
+            .menu-item .menu-img-wrapper { height: 130px; }
+        }
+        @media (max-width: 480px) {
+            .full-menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.6rem;
+            }
+            .menu-item h4 { font-size: 0.85rem; margin-bottom: 0.2rem; }
+            .menu-item .menu-price { font-size: 0.85rem; }
             .menu-item .menu-content { padding: 0.6rem; }
             .menu-item .menu-img-wrapper { height: 100px; }
+        }
+        @media (max-width: 360px) {
+            .full-menu-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .menu-item h4 { font-size: 1.1rem; }
+            .menu-item .menu-price { font-size: 1.1rem; }
+            .menu-item .menu-content { padding: 1rem; }
+            .menu-item .menu-img-wrapper { height: 180px; }
         }
         .full-menu-title {
             text-align: left;
@@ -401,7 +421,7 @@ $menu_snack = [
         .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .hamburger { display: flex; }
             .nav-links {
                 position: fixed;
