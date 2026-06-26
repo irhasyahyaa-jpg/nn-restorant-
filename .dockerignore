@@ -1,0 +1,13 @@
+.git
+.gitignore
+vendor/
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/debugbar/*
+tests/
+Dockerfile
+.dockerignore
+phpunit.dist.xml
+README.md
+LICENSE
