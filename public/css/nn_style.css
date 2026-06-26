@@ -558,3 +558,55 @@ footer {
         transform: scale(1.1) !important;
     }
 }
+
+/* Floating Sticky Menu Sidebar (Mobile Only) */
+.mobile-sticky-menu-tabs {
+    display: none;
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 30px;
+    padding: 10px 6px;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 998;
+}
+
+.sticky-tab-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sticky-tab-btn:hover {
+    color: var(--gold);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.sticky-tab-btn.active {
+    background: var(--gold-gradient);
+    color: var(--dark-bg);
+    border: none;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 768px) {
+    .mobile-sticky-menu-tabs {
+        display: flex;
+    }
+}

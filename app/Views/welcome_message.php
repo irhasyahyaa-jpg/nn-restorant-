@@ -905,6 +905,22 @@ $menu_snack = [
         </div>
     </footer>
 
+    <!-- Floating Menu Category Sidebar (Mobile Only) -->
+    <div class="mobile-sticky-menu-tabs">
+        <button class="sticky-tab-btn active" data-target="tab-minuman" title="Minuman">
+            <i class="ri-cup-line"></i>
+        </button>
+        <button class="sticky-tab-btn" data-target="tab-nusantara" title="Nusantara & Seafood">
+            <i class="ri-bowl-line"></i>
+        </button>
+        <button class="sticky-tab-btn" data-target="tab-asian" title="Asian & Western">
+            <i class="ri-knife-line"></i>
+        </button>
+        <button class="sticky-tab-btn" data-target="tab-snack" title="Snack & Packages">
+            <i class="ri-cake-2-line"></i>
+        </button>
+    </div>
+
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/6288803303388" target="_blank" class="fab-whatsapp" title="Reservasi via WhatsApp">
         <i class="ri-whatsapp-line"></i>
@@ -940,13 +956,29 @@ $menu_snack = [
             document.getElementById('hamburger').classList.remove('open');
         }
 
-        // Menu Tab Logic
-        document.querySelectorAll('.tab-btn').forEach(btn => {
+        // Menu Tab Logic (including Mobile Sticky Sidebar)
+        const allTabBtns = document.querySelectorAll('.tab-btn, .sticky-tab-btn');
+        
+        allTabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                const targetId = btn.getAttribute('data-target');
+                
+                // Remove active class from all buttons
+                allTabBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to all buttons targeting the same tab
+                document.querySelectorAll(`[data-target="${targetId}"]`).forEach(b => b.classList.add('active'));
+                
+                // Switch active menu category
                 document.querySelectorAll('.menu-category').forEach(c => c.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById(btn.getAttribute('data-target')).classList.add('active');
+                document.getElementById(targetId).classList.add('active');
+                
+                // Smooth scroll to top of menu section
+                const menuSection = document.getElementById('menu');
+                if (menuSection) {
+                    menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                
                 setTimeout(() => AOS.refresh(), 100);
             });
         });
