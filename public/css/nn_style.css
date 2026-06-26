@@ -502,33 +502,28 @@ footer {
 */
 
 /* --- First 'N' --- */
-/* Left vertical (Col 1) */
 .gallery-nn .item:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
-.gallery-nn .item:nth-child(2) { grid-area: 2 / 1 / 3 / 2; }
-.gallery-nn .item:nth-child(3) { grid-area: 3 / 1 / 4 / 2; }
-.gallery-nn .item:nth-child(4) { grid-area: 4 / 1 / 5 / 2; }
-/* Diagonal (Col 2 & Col 3) */
-.gallery-nn .item:nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
-.gallery-nn .item:nth-child(6) { grid-area: 3 / 3 / 4 / 4; }
-/* Right vertical (Col 4) */
-.gallery-nn .item:nth-child(7) { grid-area: 1 / 4 / 2 / 5; }
-.gallery-nn .item:nth-child(8) { grid-area: 2 / 4 / 3 / 5; }
-.gallery-nn .item:nth-child(9) { grid-area: 3 / 4 / 4 / 5; }
-.gallery-nn .item:nth-child(10) { grid-area: 4 / 4 / 5 / 5; }
+.gallery-nn .item:nth-child(2) { grid-area: 1 / 4 / 2 / 5; }
+.gallery-nn .item:nth-child(3) { grid-area: 1 / 6 / 2 / 7; }
+.gallery-nn .item:nth-child(4) { grid-area: 1 / 9 / 2 / 10; }
 
-/* --- Second 'N' --- */
-/* Left vertical (Col 6) */
-.gallery-nn .item:nth-child(11) { grid-area: 1 / 6 / 2 / 7; }
-.gallery-nn .item:nth-child(12) { grid-area: 2 / 6 / 3 / 7; }
-.gallery-nn .item:nth-child(13) { grid-area: 3 / 6 / 4 / 7; }
-.gallery-nn .item:nth-child(14) { grid-area: 4 / 6 / 5 / 7; }
-/* Diagonal (Col 7 & Col 8) */
-.gallery-nn .item:nth-child(15) { grid-area: 2 / 7 / 3 / 8; }
-.gallery-nn .item:nth-child(16) { grid-area: 3 / 8 / 4 / 9; }
-/* Right vertical (Col 9) */
-.gallery-nn .item:nth-child(17) { grid-area: 1 / 9 / 2 / 10; }
-.gallery-nn .item:nth-child(18) { grid-area: 2 / 9 / 3 / 10; }
-.gallery-nn .item:nth-child(19) { grid-area: 3 / 9 / 4 / 10; }
+.gallery-nn .item:nth-child(5) { grid-area: 2 / 1 / 3 / 2; }
+.gallery-nn .item:nth-child(6) { grid-area: 2 / 2 / 3 / 3; }
+.gallery-nn .item:nth-child(7) { grid-area: 2 / 4 / 3 / 5; }
+.gallery-nn .item:nth-child(8) { grid-area: 2 / 6 / 3 / 7; }
+.gallery-nn .item:nth-child(9) { grid-area: 2 / 7 / 3 / 8; }
+.gallery-nn .item:nth-child(10) { grid-area: 2 / 9 / 3 / 10; }
+
+.gallery-nn .item:nth-child(11) { grid-area: 3 / 1 / 4 / 2; }
+.gallery-nn .item:nth-child(12) { grid-area: 3 / 3 / 4 / 4; }
+.gallery-nn .item:nth-child(13) { grid-area: 3 / 4 / 4 / 5; }
+.gallery-nn .item:nth-child(14) { grid-area: 3 / 6 / 4 / 7; }
+.gallery-nn .item:nth-child(15) { grid-area: 3 / 8 / 4 / 9; }
+.gallery-nn .item:nth-child(16) { grid-area: 3 / 9 / 4 / 10; }
+
+.gallery-nn .item:nth-child(17) { grid-area: 4 / 1 / 5 / 2; }
+.gallery-nn .item:nth-child(18) { grid-area: 4 / 4 / 5 / 5; }
+.gallery-nn .item:nth-child(19) { grid-area: 4 / 6 / 5 / 7; }
 .gallery-nn .item:nth-child(20) { grid-area: 4 / 9 / 5 / 10; }
 
 @media (max-width: 1024px) {
@@ -550,20 +545,16 @@ footer {
         padding-bottom: 10px;
     }
     
-    /* Mobile Gallery NN Pattern - Reset to a beautiful responsive list of food images */
+    /* Mobile Gallery NN Pattern - Keep the N N shape with smaller gaps */
     .gallery-nn {
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-template-rows: auto !important;
-        aspect-ratio: auto !important;
-        gap: 12px !important;
+        gap: 4px !important;
+        aspect-ratio: 9 / 4 !important;
     }
     .gallery-nn .item {
-        grid-area: auto !important;
-        height: 160px !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
-        border: 1px solid rgba(212, 175, 55, 0.15) !important;
+        box-shadow: none !important;
+        border: 1px solid rgba(212, 175, 55, 0.1) !important;
     }
     .gallery-nn .item:hover {
-        transform: scale(1.05); /* Smaller pop on mobile */
+        transform: scale(1.1) !important;
     }
 }
