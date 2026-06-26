@@ -1,0 +1,94 @@
+/* Fine Dining Menu List Styles - Ultra Premium */
+.menu-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 4rem;
+    text-align: left;
+}
+
+.menu-category-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 0.8rem;
+    position: relative;
+}
+.menu-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0;
+    width: 50px; height: 1px;
+    background: #FFF;
+    box-shadow: 0 0 10px #FFF;
+}
+
+.menu-list-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    position: relative;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    cursor: default;
+}
+.menu-list-item:hover {
+    transform: translateX(10px);
+}
+.menu-list-item:hover .menu-item-name {
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.menu-item-name {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    background-color: var(--dark-bg);
+    padding-right: 15px;
+    z-index: 1;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.menu-item-desc {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: -0.5rem;
+    margin-bottom: 1.8rem;
+    opacity: 0.8;
+}
+
+.menu-dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted rgba(212, 175, 55, 0.3);
+    position: relative;
+    top: -6px;
+    transition: border-color 0.3s ease;
+}
+.menu-list-item:hover .menu-dots {
+    border-bottom: 2px dotted rgba(212, 175, 55, 0.8);
+}
+
+.menu-item-price {
+    font-family: var(--font-heading);
+    color: var(--gold);
+    font-size: 1.2rem;
+    padding-left: 15px;
+    background-color: var(--dark-bg);
+    z-index: 1;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .menu-list-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
