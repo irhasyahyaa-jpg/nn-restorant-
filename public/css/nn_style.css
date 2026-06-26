@@ -559,11 +559,11 @@ footer {
     }
 }
 
-/* Floating Sticky Menu Sidebar (Mobile Only) */
+/* Floating Sticky Menu Sidebar (Desktop & Mobile) */
 .mobile-sticky-menu-tabs {
-    display: none;
+    display: flex;
     position: fixed;
-    right: 15px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(10, 10, 10, 0.85);
@@ -607,6 +607,6 @@ footer {
 
 @media (max-width: 768px) {
     .mobile-sticky-menu-tabs {
-        display: flex;
+        right: 15px !important;
     }
 }
